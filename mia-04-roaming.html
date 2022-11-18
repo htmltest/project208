@@ -11,6 +11,8 @@
 
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width" />
+
+        <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
     </head>
 
     <body>
@@ -26,6 +28,8 @@
                                 <div class="header-logo"><a href="#"><svg><use xlink:href="images/sprite.svg#logo"></use></svg></a></div>
                                 <div class="header-title">мобильная инфраструктура атома</div>
                             </div>
+
+                            <a href="#" class="mobile-menu-link"><svg><use xlink:href="images/sprite.svg#mobile-menu-link"></use></svg></a>
 
                             <div class="header-search">
                                 <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></a>
@@ -78,8 +82,8 @@
                                 <li>
                                     <a href="#">Тарифы<span><svg><use xlink:href="images/sprite.svg#header-nav"></use></svg></span></a>
                                     <ul>
-                                        <li><a href="#">Тарифы 1</a></li>
-                                        <li><a href="#">Тарифы 2</a></li>
+                                        <li><a href="#">Бизнес</a></li>
+                                        <li><a href="#">Физлица</a></li>
                                     </ul>
                                 </li>
                                 <li class="active"><a href="#">Роуминг</a></li>
@@ -93,7 +97,78 @@
                     </div>
                 </header>
 
-                <div class="page-header">
+                <!-- mobile menu -->
+                <div class="mobile-menu">
+                    <div class="mobile-menu-container">
+                        <div class="mobile-menu-header">
+                            <div class="header-left">
+                                <div class="header-logo"><svg><use xlink:href="images/sprite.svg#logo"></use></svg></div>
+                                <div class="header-title">мобильная инфраструктура атома</div>
+                            </div>
+
+                            <a href="#" class="mobile-menu-close"><svg><use xlink:href="images/sprite.svg#window-close"></use></svg></a>
+                        </div>
+                        <div class="mobile-menu-nav">
+                            <ul>
+                                <li><a href="#">О продукте</a></li>
+                                <li>
+                                    <a href="#">Тарифы<span><svg><use xlink:href="images/sprite.svg#footer-menu"></use></svg></span></a>
+                                    <ul>
+                                        <li><a href="#">Бизнес</a></li>
+                                        <li><a href="#">Физлица</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Роуминг</a></li>
+                                <li><a href="#">Карта покрытия</a></li>
+                                <li><a href="#">Поддержка</a></li>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="mobile-menu-location">
+                            <a href="#" class="mobile-menu-location-link">Санкт-Петербург<svg><use xlink:href="images/sprite.svg#header-location"></use></svg></a>
+                            <div class="mobile-menu-location-list">
+                                <div class="mobile-menu-location-list-inner">
+                                    <ul>
+                                        <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li class="active"><a href="#">Санкт-Петербург<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Санкт-Петербург<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="mobile-menu-user-link"><svg><use xlink:href="images/sprite.svg#header-user"></use></svg>Личный кабинет</a>
+                        <div class="mobile-menu-contacts">
+                            <div class="mobile-menu-contacts-item">
+                                <div class="mobile-menu-contacts-item-title">Для звонков из России</div>
+                                <div class="mobile-menu-contacts-item-value"><a href="tel:+78005555555">8-800-555-55-55</a></div>
+                            </div>
+                            <div class="mobile-menu-contacts-item">
+                                <div class="mobile-menu-contacts-item-title">Для звонков из роуминга</div>
+                                <div class="mobile-menu-contacts-item-value"><a href="tel:+74955555555">+7 495 555-55-55</a></div>
+                            </div>
+                            <div class="mobile-menu-contacts-item">
+                                <div class="mobile-menu-contacts-item-title">Абонентам</div>
+                                <div class="mobile-menu-contacts-item-value"><a href="tel:5555">5555</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile menu END -->
+
+                <div class="page-header page-header-tariffs">
                     <div class="page-header-bg" style="background-image:url(files/page-header-roaming.jpg)"></div>
                     <div class="page-header-shadow"></div>
                     <div class="page-header-back-link">
@@ -136,13 +211,13 @@
                                     <option value="14" data-img="files/flags/AU - Australia.svg">Австралия</option>
                                     <option value="15" data-img="files/flags/AW - Aruba.svg">Аруба</option>
                                     <option value="16" data-img="files/flags/AX - Aland Islands.svg">Аландские острова</option>
-                                    <option value="16" data-img="files/flags/AZ - Azerbaijan.svg">Азербайджан</option>
-                                    <option value="17" data-img="files/flags/BA - Bosnia and Herzegovina.svg">Босния и Герцеговина</option>
-                                    <option value="18" data-img="files/flags/BB - Barbados.svg">Барбадос</option>
-                                    <option value="19" data-img="files/flags/BD - Bangladesh.svg">Бангладеш</option>
-                                    <option value="20" data-img="files/flags/BE - Belgium.svg">Бельгия</option>
-                                    <option value="21" data-img="files/flags/BF - Burkina Faso.svg">Буркина Фасо</option>
-                                    <option value="22" data-img="files/flags/US - United States.svg">Соединенные Штаты Америки</option>
+                                    <option value="17" data-img="files/flags/AZ - Azerbaijan.svg">Азербайджан</option>
+                                    <option value="18" data-img="files/flags/BA - Bosnia and Herzegovina.svg">Босния и Герцеговина</option>
+                                    <option value="19" data-img="files/flags/BB - Barbados.svg">Барбадос</option>
+                                    <option value="20" data-img="files/flags/BD - Bangladesh.svg">Бангладеш</option>
+                                    <option value="21" data-img="files/flags/BE - Belgium.svg">Бельгия</option>
+                                    <option value="22" data-img="files/flags/BF - Burkina Faso.svg">Буркина Фасо</option>
+                                    <option value="23" data-img="files/flags/US - United States.svg">Соединенные Штаты Америки</option>
                                 </select>
                             </div>
                         </form>
@@ -207,7 +282,13 @@
                     <div class="footer-menu">
                         <ul>
                             <li><a href="#">О продукте</a></li>
-                            <li><a href="#">Тарифы</a></li>
+                            <li>
+                                <a href="#">Тарифы<span><svg><use xlink:href="images/sprite.svg#footer-menu"></use></svg></span></a>
+                                <ul>
+                                    <li><a href="#">Бизнес</a></li>
+                                    <li><a href="#">Физлица</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#">Роуминг</a></li>
                             <li><a href="#">Карта покрытия</a></li>
                             <li><a href="#">Поддержка</a></li>

@@ -28,6 +28,32 @@ $(document).ready(function() {
 		}
 	});
 
+	$('body').on('click', '.form-input-clear', function(e) {
+		$(this).parent().find('input').val('').trigger('change').trigger('blur');
+		e.preventDefault();
+	});
+
+    $('body').on('change', '.form-file input', function() {
+        var curInput = $(this);
+        var curField = curInput.parents().filter('.form-file');
+        var curName = curInput.val().replace(/.*(\/|\\)/, '');
+        if (curName != '') {
+            curField.find('.form-file-input span').html('<em>' + curName + '<a href="#"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#input-file-remove"></use></svg></a></em>');
+            curField.addClass('full');
+        } else {
+            curField.find('.form-file-input span').html(curField.find('.form-file-input span').attr('data-placeholder') + '<svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#input-file"></use></svg>');
+            curField.removeClass('full');
+        }
+    });
+
+    $('body').on('click', '.form-file-input span em a', function(e) {
+        var curField = $(this).parents().filter('.form-file');
+        curField.find('input').val('');
+        curField.find('.form-file-input span').html(curField.find('.form-file-input span').attr('data-placeholder') + '<svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#input-file"></use></svg>');
+        curField.removeClass('full');
+        e.preventDefault();
+    });
+
     $('form').each(function() {
         initForm($(this));
     });
@@ -237,33 +263,145 @@ $(document).ready(function() {
         });
     });
 
-    $('.map-popup-inner form').each(function() {
-        var curForm = $(this);
-        var validator = curForm.validate();
-        if (validator) {
-            validator.destroy();
-        }
-        curForm.validate({
-            ignore: '',
-            submitHandler: function(form) {
-                var curAddress = curForm.find('.map-popup-search .form-input input').val();
-                if (curAddress == '') {
-                    curAddress = 'Москва';
-                }
-                ymaps.geocode(curAddress, {
-                    results: 1
-                }).then(function(res) {
-                    console.log(res);
-                    var firstGeoObject = res.geoObjects.get(0),
-                    coords = firstGeoObject.geometry.getCoordinates(),
-                    bounds = firstGeoObject.properties.get('boundedBy');
+    $('body').on('change', '.map-popup-search .form-input input', function() {
+        var curAddress = $(this).val();
+        console.log(curAddress);
+        if (curAddress != '') {
+            $('.search-results-submit').addClass('hidden');
+            $('.search-results-clear').addClass('visible');
 
-                    myMap.setBounds(bounds, {
-                        checkZoomRange: true
-                    });
+            ymaps.geocode(curAddress, {
+                results: 1
+            }).then(function(res) {
+                var firstGeoObject = res.geoObjects.get(0),
+                coords = firstGeoObject.geometry.getCoordinates(),
+                bounds = firstGeoObject.properties.get('boundedBy');
+
+                myMap.setBounds(bounds, {
+                    checkZoomRange: true
                 });
+            });
+        } else {
+            $('.search-results-submit').removeClass('hidden');
+            $('.search-results-clear').removeClass('visible');
+        }
+    });
+
+    $('body').on('click', '.search-results-clear button', function() {
+        $('.map-popup-search .form-input input').val('').trigger('change');
+    });
+
+    $('.map-operator').each(function() {
+        updateMap();
+    });
+
+    $('.map-operator input').change(function() {
+        updateMap();
+    });
+
+    $('body').on('change', '.map-popup-params input', function() {
+        updateMapTiles();
+    });
+
+    $('.main-tariffs-header-type-current').click(function() {
+        $(this).parent().toggleClass('open');
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.main-tariffs-header-type').length == 0) {
+            $('.main-tariffs-header-type').removeClass('open');
+        }
+    });
+
+    $('.main-tariffs-header-type-item').click(function() {
+        var curItem = $(this);
+        if (!curItem.hasClass('active')) {
+            $('.main-tariffs-header-type-item.active').removeClass('active');
+            curItem.addClass('active');
+            $('.main-tariffs-header-type-current span').html(curItem.html());
+            filterTariffs();
+        }
+        $('.main-tariffs-header-type').removeClass('open');
+    });
+
+    $('.main-tariffs-header-filter-current').click(function() {
+        var curFilter = $(this).parent();
+        if (curFilter.hasClass('open')) {
+            curFilter.removeClass('open');
+        } else {
+            $('.main-tariffs-header-filter.open').removeClass('open');
+            curFilter.addClass('open')
+        }
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.main-tariffs-header-filter').length == 0) {
+            $('.main-tariffs-header-filter.open').removeClass('open');
+        }
+    });
+
+    $('.main-tariffs-header-filter-item').click(function() {
+        var curItem = $(this);
+        if (!curItem.hasClass('active')) {
+            var curFilter = curItem.parent().parent();
+            curFilter.find('.main-tariffs-header-filter-item.active').removeClass('active');
+            curItem.addClass('active');
+            curFilter.find('.main-tariffs-header-filter-current span').html(curItem.html());
+            filterTariffs();
+        }
+        curFilter.removeClass('open');
+    });
+
+    $('.main-tariffs-list').each(function() {
+        filterTariffs();
+    });
+
+    $('.footer-menu ul li a').click(function(e) {
+        if ($(window).width() < 768) {
+            var curLi = $(this).parent();
+            if (curLi.find('ul').length == 1) {
+                curLi.toggleClass('open');
+                e.preventDefault();
             }
-        });
+        }
+    });
+
+    $('.contacts-map').each(function() {
+        $('html').addClass('page-contacts');
+    });
+
+    $('.mobile-menu-link').click(function(e) {
+        var curWidth = $(window).width();
+        if (curWidth < 480) {
+            curWidth = 480;
+        }
+        var curScroll = $(window).scrollTop();
+        $('html').addClass('mobile-menu-open');
+        $('meta[name="viewport"]').attr('content', 'width=' + curWidth);
+        $('html').data('scrollTop', curScroll);
+        $('.wrapper').css('margin-top', -curScroll);
+        e.preventDefault();
+    });
+
+    $('.mobile-menu-close').click(function(e) {
+        $('html').removeClass('mobile-menu-open');
+        $('meta[name="viewport"]').attr('content', 'width=device-width');
+        $('.wrapper').css('margin-top', 0);
+        $(window).scrollTop($('html').data('scrollTop'));
+        e.preventDefault();
+    });
+
+    $('.mobile-menu-nav ul li a').click(function(e) {
+        var curLi = $(this).parent();
+        if (curLi.find('ul').length == 1) {
+            curLi.toggleClass('open');
+            e.preventDefault();
+        }
+    });
+
+    $('.mobile-menu-location-link').click(function(e) {
+        $('.mobile-menu-location').toggleClass('open');
+        e.preventDefault();
     });
 
 });
@@ -478,6 +616,120 @@ function windowClose() {
     }
 }
 
+function filterTariffs() {
+    $('.main-tariffs-list-slider').stop();
+    $('.main-tariffs-list-slider').animate({'opacity': 0}, 250, function() {
+        var curType = 'all';
+        if ($('.main-tariffs-header-type').length == 1) {
+            curType = $('.main-tariffs-header-type-item.active').attr('data-value');
+        }
+        var curOperator = 'all';
+        if ($('.main-tariffs-header-filter[data-filter="operators"]').length == 1) {
+            curOperator = $('.main-tariffs-header-filter[data-filter="operators"] .main-tariffs-header-filter-item.active').attr('data-value');
+        }
+        var curConnection = 'all';
+        if ($('.main-tariffs-header-filter[data-filter="connection"]').length == 1) {
+            curConnection = $('.main-tariffs-header-filter[data-filter="connection"] .main-tariffs-header-filter-item.active').attr('data-value');
+        }
+
+        var newHTML =   '<div class="main-tariffs-list-slider-inner">';
+
+        $('.main-tariffs-list .main-tariffs-item').each(function() {
+            var curItem = $(this);
+            var classOptimal = '';
+            if (curItem.hasClass('optimal')) {
+                classOptimal = ' optimal';
+            }
+            if (
+                    (curType == 'all' || curItem.attr('data-type') == curType) &&
+                    (curOperator == 'all' || curItem.attr('data-operator') == curOperator) &&
+                    (curConnection == 'all' || curItem.attr('data-connection') == curConnection)
+                ) {
+                newHTML += '<div class="main-tariffs-item' + classOptimal + '">' + curItem.html() + '</div>';
+            }
+        });
+
+        newHTML +=      '</div>';
+
+        $('.main-tariffs-list-slider').html(newHTML);
+
+        resizeTariffs();
+
+        if ($('.main-tariffs-page').length == 0) {
+            $('.main-tariffs-list-slider-inner').slick({
+                infinite: false,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                arrows: false,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 1199,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        }
+        $('.main-tariffs-list-slider').animate({'opacity': 1}, 250);
+    });
+}
+
+function resizeTariffs() {
+    $('.main-tariffs-list-slider').each(function() {
+        var curList = $(this);
+
+        curList.find('h4').css({'min-height': '0px'});
+
+        curList.find('h4').each(function() {
+            var curBlock = $(this);
+            var curHeight = curBlock.outerHeight();
+            var curTop = curBlock.parents().filter('.main-tariffs-item').offset().top;
+
+            curList.find('h4').each(function() {
+                var otherBlock = $(this);
+                if (otherBlock.parents().filter('.main-tariffs-item').offset().top == curTop) {
+                    var newHeight = otherBlock.outerHeight();
+                    if (newHeight > curHeight) {
+                        curBlock.css({'min-height': newHeight + 'px'});
+                    } else {
+                        otherBlock.css({'min-height': curHeight + 'px'});
+                    }
+                }
+            });
+        });
+
+        curList.find('.main-tariffs-item-info').css({'min-height': '0px'});
+
+        curList.find('.main-tariffs-item-info').each(function() {
+            var curBlock = $(this);
+            var curHeight = curBlock.outerHeight();
+            var curTop = curBlock.parents().filter('.main-tariffs-item').offset().top;
+
+            curList.find('.main-tariffs-item-info').each(function() {
+                var otherBlock = $(this);
+                if (otherBlock.parents().filter('.main-tariffs-item').offset().top == curTop) {
+                    var newHeight = otherBlock.outerHeight();
+                    if (newHeight > curHeight) {
+                        curBlock.css({'min-height': newHeight + 'px'});
+                    } else {
+                        otherBlock.css({'min-height': curHeight + 'px'});
+                    }
+                }
+            });
+        });
+    });
+}
+
 $(window).on('load resize', function() {
 
     $('.main-prefs-list').each(function() {
@@ -504,29 +756,7 @@ $(window).on('load resize', function() {
         });
     });
 
-    $('.main-tariffs-list').each(function() {
-        var curList = $(this);
-
-        curList.find('.main-tariffs-item-info').css({'min-height': '0px'});
-
-        curList.find('.main-tariffs-item-info').each(function() {
-            var curBlock = $(this);
-            var curHeight = curBlock.outerHeight();
-            var curTop = curBlock.parents().filter('.main-tariffs-item').offset().top;
-
-            curList.find('.main-tariffs-item-info').each(function() {
-                var otherBlock = $(this);
-                if (otherBlock.parents().filter('.main-tariffs-item').offset().top == curTop) {
-                    var newHeight = otherBlock.outerHeight();
-                    if (newHeight > curHeight) {
-                        curBlock.css({'min-height': newHeight + 'px'});
-                    } else {
-                        otherBlock.css({'min-height': curHeight + 'px'});
-                    }
-                }
-            });
-        });
-    });
+    resizeTariffs();
 
     $('.contacts').each(function() {
         var curList = $(this);
@@ -626,3 +856,46 @@ $(window).on('scroll', function() {
         }
     }, 50);
 });
+
+function updateMap() {
+    var curForm = $('.map-operator form');
+    $('.map').addClass('loading');
+    var formData = new FormData(curForm[0]);
+
+    $.ajax({
+        type: 'POST',
+        url: curForm.attr('action'),
+        processData: false,
+        contentType: false,
+        dataType: 'html',
+        data: formData,
+        cache: false
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+        alert('Сервис временно недоступен, попробуйте позже.')
+    }).done(function(html) {
+        $('.map').html(html);
+        $('.map').removeClass('loading');
+    });
+}
+
+function updateMapTiles() {
+    if (myMap) {
+        if ($('.map-popup-param input[name="type2g"]:checked').length == 1) {
+            myMap.layers.add(layer2G);
+        } else {
+            myMap.layers.remove(layer2G);
+        }
+
+        if ($('.map-popup-param input[name="type3g"]:checked').length == 1) {
+            myMap.layers.add(layer3G);
+        } else {
+            myMap.layers.remove(layer3G);
+        }
+
+        if ($('.map-popup-param input[name="type4g"]:checked').length == 1) {
+            myMap.layers.add(layer4G);
+        } else {
+            myMap.layers.remove(layer4G);
+        }
+    }
+}
