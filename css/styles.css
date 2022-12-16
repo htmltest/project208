@@ -1328,6 +1328,18 @@ label.error {display:block; margin:8px 0 0 0; font-weight:normal; font-size:16px
 .company-info-block-photos-item {display:inline-block; vertical-align:top; width:100%; white-space:normal}
 .company-info-block-photos-item-img img {display:block; width:100%}
 .company-info-block-photos-item-title {margin:23px 0 0 0; font-weight:500; font-size:16px; line-height:22px; letter-spacing:-0.01em; color:#2C2C2C}
+.company-info-block-photos-list .slick-prev,
+.company-info-block-photos-list .slick-next {display:block; position:absolute; z-index:2; top:50%; width:36px; height:36px; border:none; border-radius:50%; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:rgba(0, 29, 43, 0.4); transform:translateY(-50%); transition:background 0.2s}
+@media (min-width:1200px) {
+    .company-info-block-photos-list .slick-prev:hover,
+    .company-info-block-photos-list .slick-next:hover {background:rgba(0, 29, 43, 0.8)}
+}
+.company-info-block-photos-list .slick-prev {left:20px}
+.company-info-block-photos-list .slick-next {right:20px}
+.company-info-block-photos-list .slick-prev.slick-disabled,
+.company-info-block-photos-list .slick-next.slick-disabled {display:none !important}
+.company-info-block-photos-list .slick-prev svg,
+.company-info-block-photos-list .slick-next svg {display:block; width:36px; height:36px; fill:none; stroke:#FFFFFF}
 .company-info-block-photos-list .slick-dots {text-align:center; font-size:0; line-height:0; letter-spacing:-1px; margin:0; padding:0; position:absolute; left:0; bottom:28px; right:0}
 .company-info-block-photos-list .slick-dots li {margin:0 4px; padding:0; display:inline-block; vertical-align:top}
 .company-info-block-photos-list .slick-dots li::before {display:none}

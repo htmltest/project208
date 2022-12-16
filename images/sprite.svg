@@ -195,4 +195,12 @@
         <rect x="15.7129" y="11.1562" width="2.06452" height="11.3548" transform="rotate(45 15.7129 11.1562)" />
     </symbol>
 
+    <symbol viewBox="0 0 36 36" id="company-info-block-photos-list-prev">
+        <path d="M21 12L15 18L21 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
+    <symbol viewBox="0 0 36 36" id="company-info-block-photos-list-next" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 24L21 18L15 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
 </svg>

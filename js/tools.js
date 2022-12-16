@@ -205,12 +205,43 @@ $(document).ready(function() {
         }
     });
 
-    $('.company-info-block-photos-list').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true
+    $('.company-info-block-photos-list').each(function() {
+        var curGallery = $(this);
+        curGallery.on('init', function(event, slick) {
+            var curSlide = curGallery.find('.slick-current');
+            var curPhotoHeight = curSlide.find('.company-info-block-photos-item-img').outerHeight();
+            curGallery.find('.slick-prev').css({'top': curPhotoHeight / 2});
+            curGallery.find('.slick-next').css({'top': curPhotoHeight / 2});
+        });
+        var options = {
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#company-info-block-photos-list-prev"></use></svg></button>',
+            nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#company-info-block-photos-list-next"></use></svg></button>',
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        arrows: false
+                    }
+                }
+            ]
+        };
+        curGallery.slick(
+            options
+        ).on('setPosition', function(event, slick) {
+            var curSlide = curGallery.find('.slick-current');
+            var curPhotoHeight = curSlide.find('.company-info-block-photos-item-img').outerHeight();
+            curGallery.find('.slick-prev').css({'top': curPhotoHeight / 2});
+            curGallery.find('.slick-next').css({'top': curPhotoHeight / 2});
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            var curSlide = curGallery.find('.slick-slide:not(.slick-cloned)').eq(nextSlide);
+            var curPhotoHeight = curSlide.find('.company-info-block-photos-item-img').outerHeight();
+            curGallery.find('.slick-prev').css({'top': curPhotoHeight / 2});
+            curGallery.find('.slick-next').css({'top': curPhotoHeight / 2});
+        });
     });
 
     $('body').on('click', '.news-card-ctrl-social-link-ok', function(e) {

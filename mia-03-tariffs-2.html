@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>МИА</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/select2/select2.css" />
+        <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width" />
+
+        <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header class="header">
+                    <div class="header-container">
+                        <div class="container">
+                            <div class="header-left">
+                                <div class="header-logo"><a href="#"><svg><use xlink:href="images/sprite.svg#logo"></use></svg></a></div>
+                                <div class="header-title">мобильная инфраструктура атома</div>
+                            </div>
+
+                            <a href="#" class="mobile-menu-link"><svg><use xlink:href="images/sprite.svg#mobile-menu-link"></use></svg></a>
+
+                            <div class="header-search">
+                                <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></a>
+                            </div>
+
+                            <div class="header-search-form">
+                                <div class="container">
+                                    <form action="#" method="post">
+                                        <div class="header-search-form-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></button></div>
+                                        <div class="header-search-form-input"><input type="text" name="search" value="" placeholder="Введите запрос" /></div>
+                                        <a href="#" class="header-search-close"><svg><use xlink:href="images/sprite.svg#window-close"></use></svg></a>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="header-user">
+                                <a href="#" class="header-user-link"><svg><use xlink:href="images/sprite.svg#header-user"></use></svg>Личный кабинет</a>
+                            </div>
+
+                            <div class="header-location">
+                                <a href="#" class="header-location-link"><svg><use xlink:href="images/sprite.svg#header-location"></use></svg>Санкт-Петербург</a>
+                                <div class="header-location-list">
+                                    <div class="header-location-list-inner">
+                                        <ul>
+                                            <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                            <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                            <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                            <li class="active"><a href="#">Санкт-Петербург<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                            <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                            <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                            <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                            <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                            <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                            <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                            <li><a href="#">Санкт-Петербург<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                            <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                            <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                            <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header-nav">
+                        <div class="container">
+                            <ul>
+                                <li><a href="#">О продукте</a></li>
+                                <li class="active">
+                                    <a href="#">Тарифы<span><svg><use xlink:href="images/sprite.svg#header-nav"></use></svg></span></a>
+                                    <ul>
+                                        <li><a href="#">Бизнес</a></li>
+                                        <li><a href="#">Физлица</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Роуминг</a></li>
+                                <li><a href="#">Карта покрытия</a></li>
+                                <li><a href="#">Поддержка</a></li>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- mobile menu -->
+                <div class="mobile-menu">
+                    <div class="mobile-menu-container">
+                        <div class="mobile-menu-header">
+                            <div class="header-left">
+                                <div class="header-logo"><svg><use xlink:href="images/sprite.svg#logo"></use></svg></div>
+                                <div class="header-title">мобильная инфраструктура атома</div>
+                            </div>
+
+                            <a href="#" class="mobile-menu-close"><svg><use xlink:href="images/sprite.svg#window-close"></use></svg></a>
+                        </div>
+                        <div class="mobile-menu-nav">
+                            <ul>
+                                <li><a href="#">О продукте</a></li>
+                                <li>
+                                    <a href="#">Тарифы<span><svg><use xlink:href="images/sprite.svg#footer-menu"></use></svg></span></a>
+                                    <ul>
+                                        <li><a href="#">Бизнес</a></li>
+                                        <li><a href="#">Физлица</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Роуминг</a></li>
+                                <li><a href="#">Карта покрытия</a></li>
+                                <li><a href="#">Поддержка</a></li>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="mobile-menu-location">
+                            <a href="#" class="mobile-menu-location-link">Санкт-Петербург<svg><use xlink:href="images/sprite.svg#header-location"></use></svg></a>
+                            <div class="mobile-menu-location-list">
+                                <div class="mobile-menu-location-list-inner">
+                                    <ul>
+                                        <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li class="active"><a href="#">Санкт-Петербург<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Санкт-Петербург<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Москва<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                        <li><a href="#">Московская область<svg><use xlink:href="images/sprite.svg#header-location-active"></use></svg></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="mobile-menu-user-link"><svg><use xlink:href="images/sprite.svg#header-user"></use></svg>Личный кабинет</a>
+                        <div class="mobile-menu-contacts">
+                            <div class="mobile-menu-contacts-item">
+                                <div class="mobile-menu-contacts-item-title">Для звонков из России</div>
+                                <div class="mobile-menu-contacts-item-value"><a href="tel:+78005555555">8-800-555-55-55</a></div>
+                            </div>
+                            <div class="mobile-menu-contacts-item">
+                                <div class="mobile-menu-contacts-item-title">Для звонков из роуминга</div>
+                                <div class="mobile-menu-contacts-item-value"><a href="tel:+74955555555">+7 495 555-55-55</a></div>
+                            </div>
+                            <div class="mobile-menu-contacts-item">
+                                <div class="mobile-menu-contacts-item-title">Абонентам</div>
+                                <div class="mobile-menu-contacts-item-value"><a href="tel:5555">5555</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile menu END -->
+
+                <div class="page-header page-header-tariffs">
+                    <div class="page-header-bg" style="background-image:url(files/page-header-tariffs.jpg)"></div>
+                    <div class="page-header-shadow"></div>
+                    <div class="page-header-back-link">
+                        <div class="container">
+                            <a href="#"><svg><use xlink:href="images/sprite.svg#page-header-back-link"></use></svg>Главная</a>
+                        </div>
+                    </div>
+                    <div class="page-header-container">
+                        <div class="container">
+                            <div class="page-header-content">
+                                <div class="page-header-title">Тарифы для бизнеса</div>
+                                <div class="page-header-text">Целью проекта, реализованного компанией «АТОМДАТА», является обеспечение защищенной и&nbsp;устойчивой связью предприятий отрасли, а также сотрудников организаций и членов их семей.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- container -->
+                <div class="container">
+
+                    <!-- main tariffs -->
+                    <div class="main-tariffs main-tariffs-page">
+                        <div class="main-tariffs-header">
+                            <div class="main-title">
+                                Тарифы для
+                                <div class="main-tariffs-header-type" data-filter="type">
+                                    <div class="main-tariffs-header-type-current"><span>Бизнеса</span><svg><use xlink:href="images/sprite.svg#main-tariffs-header-type"></use></svg></div>
+                                    <div class="main-tariffs-header-type-list">
+                                        <div class="main-tariffs-header-type-item active" data-value="business">Бизнеса</div>
+                                        <div class="main-tariffs-header-type-item" data-value="individuals">Физлиц</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-tariffs-header-filters">
+                                <div class="main-tariffs-header-filter" data-filter="operators">
+                                    <div class="main-tariffs-header-filter-current"><span>4 оператора</span><svg><use xlink:href="images/sprite.svg#main-tariffs-header-filter"></use></svg></div>
+                                    <div class="main-tariffs-header-filter-list">
+                                        <div class="main-tariffs-header-filter-item active" data-value="4">4 оператора</div>
+                                        <div class="main-tariffs-header-filter-item" data-value="1">1 оператор</div>
+                                        <div class="main-tariffs-header-filter-item" data-value="all">все варианты</div>
+                                    </div>
+                                </div>
+                                <div class="main-tariffs-header-filter" data-filter="connection">
+                                    <div class="main-tariffs-header-filter-current"><span>связь</span><svg><use xlink:href="images/sprite.svg#main-tariffs-header-filter"></use></svg></div>
+                                    <div class="main-tariffs-header-filter-list">
+                                        <div class="main-tariffs-header-filter-item active" data-value="connect">связь</div>
+                                        <div class="main-tariffs-header-filter-item" data-value="m2m">M2M</div>
+                                        <div class="main-tariffs-header-filter-item" data-value="iot">IoT</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main-tariffs-list">
+                            <div class="main-tariffs-item" data-type="business" data-operator="4" data-connection="m2m">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Бизнес<br /> 4 оператора M2M</h4>
+                                    <div class="main-tariffs-item-size">4 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>205 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="business" data-operator="4" data-connection="connect">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Бизнес<br /> 4 оператора связь</h4>
+                                    <div class="main-tariffs-item-size">4 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>205 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="business" data-operator="4" data-connection="connect">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Бизнес<br /> 4 оператора связь</h4>
+                                    <div class="main-tariffs-item-size">12 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>205 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item optimal" data-type="business" data-operator="4" data-connection="connect">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Бизнес<br /> 4 оператора связь</h4>
+                                    <div class="main-tariffs-item-size">18 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>205 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="business" data-operator="4" data-connection="connect">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Бизнес<br /> 4 оператора связь</h4>
+                                    <div class="main-tariffs-item-size">22 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>205 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="business" data-operator="1" data-connection="m2m">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Бизнес<br /> 1 оператор M2M</h4>
+                                    <div class="main-tariffs-item-size">4 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>205 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="business" data-operator="1" data-connection="iot">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Бизнес<br /> 1 оператор IoT</h4>
+                                    <div class="main-tariffs-item-size">12 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>405 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="business" data-operator="4" data-connection="iot">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Бизнес<br /> 4 оператора IoT</h4>
+                                    <div class="main-tariffs-item-size">12 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>405 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item optimal" data-type="business" data-operator="1" data-connection="iot">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Бизнес<br /> 1 оператор IoT</h4>
+                                    <div class="main-tariffs-item-size">18 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>545 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="business" data-operator="1" data-connection="iot">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Бизнес<br /> 1 оператор IoT</h4>
+                                    <div class="main-tariffs-item-size">22 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>705 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="business" data-operator="1" data-connection="M2M">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Бизнес<br /> 1 оператор M2M</h4>
+                                    <div class="main-tariffs-item-size">22 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>705 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="business" data-operator="1" data-connection="connect">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Бизнес<br /> 1 оператор связь</h4>
+                                    <div class="main-tariffs-item-size">22 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>705 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="business" data-operator="4" data-connection="iot">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Бизнес<br /> 4 оператора IoT</h4>
+                                    <div class="main-tariffs-item-size">22 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>705 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="business" data-operator="4" data-connection="m2m">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Бизнес<br /> 4 оператора M2M</h4>
+                                    <div class="main-tariffs-item-size">12 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>405 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="business" data-operator="4" data-connection="connect">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Бизнес<br /> 4 оператора связь</h4>
+                                    <div class="main-tariffs-item-size">12 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>405 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="individuals" data-operator="4" data-connection="m2m">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Физлица<br /> 4 оператора M2M</h4>
+                                    <div class="main-tariffs-item-size">4 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>205 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="individuals" data-operator="1" data-connection="iot">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Физлица<br /> 1 оператор IoT</h4>
+                                    <div class="main-tariffs-item-size">12 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>405 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item optimal" data-type="individuals" data-operator="1" data-connection="iot">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Физлица<br /> 1 оператор IoT</h4>
+                                    <div class="main-tariffs-item-size">18 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>545 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="individuals" data-operator="1" data-connection="iot">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Физлица<br /> 1 оператор IoT</h4>
+                                    <div class="main-tariffs-item-size">22 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>705 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="individuals" data-operator="4" data-connection="iot">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Физлица<br /> 4 оператора IoT</h4>
+                                    <div class="main-tariffs-item-size">22 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>705 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="individuals" data-operator="4" data-connection="m2m">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Физлица<br /> 4 оператора M2M</h4>
+                                    <div class="main-tariffs-item-size">12 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>405 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="individuals" data-operator="1" data-connection="m2m">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Физлица<br /> 1 оператор M2M</h4>
+                                    <div class="main-tariffs-item-size">12 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>405 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="individuals" data-operator="1" data-connection="connect">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Физлица<br /> 1 оператор связь</h4>
+                                    <div class="main-tariffs-item-size">12 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>405 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+
+                            <div class="main-tariffs-item" data-type="individuals" data-operator="4" data-connection="connect">
+                                <div class="main-tariffs-item-inner">
+                                    <h4>Физлица<br /> 4 оператора связь</h4>
+                                    <div class="main-tariffs-item-size">12 Гб</div>
+                                    <div class="main-tariffs-item-info">
+                                        <p>360 мин</p>
+                                        <p>60 sms</p>
+                                        <div class="main-tariffs-item-info-add">
+                                            <p>Бесплатно:</p>
+                                            <ul>
+                                                <li>звонки внутри сети</li>
+                                                <li>трафик на сайт оператора&nbsp;и&nbsp;ЛК</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main-tariffs-item-price"><span>405 ₽</span> / мес</div>
+                                    <div class="main-tariffs-item-btn"><a href="windows/order.html" class="btn-border window-link">Подключить</a></div>
+                                    <div class="main-tariffs-item-link"><a href="#">Подробно о тарифе</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-tariffs-list-slider"></div>
+                    </div>
+                    <!-- main tariffs END -->
+
+                    <!-- faq -->
+                    <div class="faq">
+                        <div class="faq-item">
+                            <a href="#" class="faq-item-title">Дополнительная информация<svg><use xlink:href="images/sprite.svg#faq-item-title"></use></svg></a>
+                            <div class="faq-item-content">Компания оказывает услуги размещения оборудования клиентов в ЦОД и обеспечения связанности размещенных ресурсов, предоставляет доступ в Интернет и облачные сервисы на базе импортозамещенного ПО, а также услуги виртуального оператора связи “МИА” (имеется соответствующая</div>
+                        </div>
+                        <div class="faq-item">
+                            <a href="#" class="faq-item-title">Преимущества мобильной связи «МИА»<svg><use xlink:href="images/sprite.svg#faq-item-title"></use></svg></a>
+                            <div class="faq-item-content">Компания оказывает услуги размещения оборудования клиентов в ЦОД и обеспечения связанности размещенных ресурсов, предоставляет доступ в Интернет и облачные сервисы на базе импортозамещенного ПО, а также услуги виртуального оператора связи “МИА” (имеется соответствующая</div>
+                        </div>
+                        <div class="faq-item">
+                            <a href="#" class="faq-item-title">Как это работает?<svg><use xlink:href="images/sprite.svg#faq-item-title"></use></svg></a>
+                            <div class="faq-item-content">Компания оказывает услуги размещения оборудования клиентов в ЦОД и обеспечения связанности размещенных ресурсов, предоставляет доступ в Интернет и облачные сервисы на базе импортозамещенного ПО, а также услуги виртуального оператора связи “МИА” (имеется соответствующая</div>
+                        </div>
+                        <div class="faq-item">
+                            <a href="#" class="faq-item-title">Дополнительная информация<svg><use xlink:href="images/sprite.svg#faq-item-title"></use></svg></a>
+                            <div class="faq-item-content">Компания оказывает услуги размещения оборудования клиентов в ЦОД и обеспечения связанности размещенных ресурсов, предоставляет доступ в Интернет и облачные сервисы на базе импортозамещенного ПО, а также услуги виртуального оператора связи “МИА” (имеется соответствующая</div>
+                        </div>
+                    </div>
+                    <!-- faq END -->
+
+                    <!-- contacts block -->
+                    <div class="contacts-block">
+                        <div class="main-title">Есть вопросы?</div>
+                        <div class="contacts-block-list">
+                            <div class="contacts-block-item">
+                                <div class="contacts-block-item-icon">
+                                    <div class="contacts-block-item-icon-inner"><svg><use xlink:href="images/sprite.svg#main-prefs-1"></use></svg></div>
+                                </div>
+                                <div class="contacts-block-item-content">
+                                    <div class="contacts-block-item-title">Позвоните нам</div>
+                                    <div class="contacts-block-item-text"><a href="tel:+78005555555">8 800 555-55-55</a>,<br /> <a href="tel:5555">5555</a> (абонентам)</div>
+                                </div>
+                            </div>
+                            <div class="contacts-block-item">
+                                <div class="contacts-block-item-icon">
+                                    <div class="contacts-block-item-icon-inner"><svg><use xlink:href="images/sprite.svg#main-prefs-1"></use></svg></div>
+                                </div>
+                                <div class="contacts-block-item-content">
+                                    <div class="contacts-block-item-title">Напишите нам</div>
+                                    <div class="contacts-block-item-text"><a href="mailto:info@mia-tel.ru">info@mia-tel.ru</a></div>
+                                </div>
+                            </div>
+                            <div class="contacts-block-item">
+                                <div class="contacts-block-item-icon">
+                                    <div class="contacts-block-item-icon-inner"><svg><use xlink:href="images/sprite.svg#main-prefs-1"></use></svg></div>
+                                </div>
+                                <div class="contacts-block-item-content">
+                                    <div class="contacts-block-item-title">Отправьте вопрос через сайт</div>
+                                    <div class="contacts-block-item-btn"><a href="windows/feedback.html" class="btn-border btn-mini window-link">Написать</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- contacts block END -->
+
+                </div>
+                <!-- container END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-left">
+                        <div class="footer-logo"><svg><use xlink:href="images/sprite.svg#logo"></use></svg></div>
+                        <div class="footer-title">мобильная инфраструктура атома</div>
+                        <div class="footer-info">АО "АТОМДАТА", ОГРН1207700111277, лицензия Роскомнадзора № Л030-00114-77/00155174, 6+<br /> г. Москва, проезд 4-й Рощинский, д. 19, офис 301</div>
+                    </div>
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">О продукте</a></li>
+                            <li>
+                                <a href="#">Тарифы<span><svg><use xlink:href="images/sprite.svg#footer-menu"></use></svg></span></a>
+                                <ul>
+                                    <li><a href="#">Бизнес</a></li>
+                                    <li><a href="#">Физлица</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Роуминг</a></li>
+                            <li><a href="#">Карта покрытия</a></li>
+                            <li><a href="#">Поддержка</a></li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-btn"><a href="windows/feedback.html" class="btn btn-mini window-link">Обратная связь</a></div>
+                    <div class="footer-contacts">
+                        <div class="footer-contacts-item">
+                            <div class="footer-contacts-item-title">Для звонков из России</div>
+                            <div class="footer-contacts-item-value"><a href="tel:+78005555555">8-800-555-55-55</a></div>
+                        </div>
+                        <div class="footer-contacts-item">
+                            <div class="footer-contacts-item-title">Для звонков из роуминга</div>
+                            <div class="footer-contacts-item-value"><a href="tel:+74955555555">+7 495 555-55-55</a></div>
+                        </div>
+                        <div class="footer-contacts-item">
+                            <div class="footer-contacts-item-title">Абонентам</div>
+                            <div class="footer-contacts-item-value"><a href="tel:5555">5555</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-links"><a href="#">Карта сайта</a> &nbsp;|&nbsp; <a href="#">Политика безопасности</a></div>
+                    <div class="footer-copyrights">© 2022, АО «АТОМДАТА» <span>ОГРН1207700111277, лицензия Роскомнадзора № Л030-00114-77/00155174, 6+</span></div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            var pathTemplate = './';
+        </script>
+        <script src="js/fonts.js"></script>
+
+        <script src="js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/ru.js"></script>
+        <script src="js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>
