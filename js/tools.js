@@ -148,11 +148,7 @@ $(document).ready(function() {
 
     $('.header-search-link').click(function(e) {
         $('.header-search-form').addClass('open');
-        e.preventDefault();
-    });
-
-    $('.header-search-link').click(function(e) {
-        $('.header-search-form').addClass('open');
+        $('.header-search-form-input input').trigger('focus');
         e.preventDefault();
     });
 
