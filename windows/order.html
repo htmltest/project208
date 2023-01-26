@@ -5,11 +5,18 @@
             <div class="form-input"><span>ФИО<em>*</em></span><input type="text" name="name" value="" class="required" /></div>
             <div class="form-input"><span>Контактный телефон<em>*</em></span><input type="text" name="phone" value="" class="required phoneRU" /></div>
             <div class="form-input"><span>Организация<em>*</em></span><input type="text" name="company" value="" class="required" /></div>
-            <div class="form-select form-select-ajax" data-link="ajax/cities.json">
-                <select name="city" data-placeholder="Город">
-                    <option value=""></option>
-                </select>
+
+            <div class="form-input form-input-city">
+                <span>Город<em>*</em></span>
+                <input type="text" name="city" value="Санкт-Петербург" class="required" disabled="disabled" />
+                <div class="form-input-city-select">
+                    <div class="form-input-city-select-input"><input type="text" name="city" value="" data-url="ajax/citylist.json" /></div>
+                    <div class="form-input-city-select-list"></div>
+                    <div class="form-input-city-select-hint">Введите минимум 3 буквы</div>
+                    <div class="form-input-city-select-nothing">Нет вариантов</div>
+                </div>
             </div>
+
             <div class="form-input"><span>E-mail<em>*</em></span><input type="text" name="email" value="" class="required email" /></div>
             <div class="form-notice">Нажимая на кнопку «Отправить», вы даете согласие<br /> на обработку персональных данных.</div>
             <div class="form-submit"><input type="submit" class="btn" value="Отправить" /></div>

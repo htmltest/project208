@@ -56,7 +56,7 @@
             </div>
         </div>
 <?php
-    } elseif ($_POST["operator"] == "_2") {
+    } elseif ($_POST["operator"] == "2") {
 ?>
         <div class="map-inner" id="map"></div>
         <script>
@@ -113,7 +113,7 @@
             </div>
         </div>
 <?php
-    } elseif ($_POST["operator"] == "_3") {
+    } elseif ($_POST["operator"] == "3") {
 ?>
         <div class="map-inner" id="map"></div>
         <script>
@@ -170,7 +170,7 @@
             </div>
         </div>
 <?php
-    } elseif ($_POST["operator"] == "_4") {
+    } elseif ($_POST["operator"] == "4") {
 ?>
         <div class="map-inner" id="map"></div>
         <script>
