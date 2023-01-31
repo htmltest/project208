@@ -1841,9 +1841,9 @@ label.error {display:block; margin:8px 0 0 0; font-weight:normal; font-size:16px
     .map-notice {margin:12px 0 0 0; font-size:20px; line-height:28px}
 }
 
-.map-operator {margin:40px 0 0 0}
+.map-operator {margin:32px 0 0 0}
 .map-operator form {margin:0 0 0 -8px; padding:0; font-size:0; line-height:0; letter-spacing:-1px}
-.map-operator-item {display:inline-block; vertical-align:top; margin:0 0 0 8px}
+.map-operator-item {display:inline-block; vertical-align:top; margin:8px 0 0 8px}
 .map-operator-item label {display:block; cursor:pointer}
 .map-operator-item input {display:none}
 .map-operator-item span {display:block; position:relative; padding:9px; border:2px solid #D9D9D9; border-radius:4px; color:#000000; font-weight:500; font-size:20px; line-height:28px; letter-spacing:-0.01em; transition:background 0.2s, border-color 0.2s}
@@ -1857,7 +1857,7 @@ label.error {display:block; margin:8px 0 0 0; font-weight:normal; font-size:16px
 }
 
 @media (max-width:767px) {
-    .map-operator-item span {font-size:18px; line-height:25px; padding:8px 14px}
+    .map-operator-item span {font-size:18px; line-height:25px; padding:8px 14px; min-width:142px}
 }
 
 .map {margin:40px 0 0 0; position:relative; min-height:38px}
