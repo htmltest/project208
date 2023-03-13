@@ -196,13 +196,13 @@
 
                 new ymaps.SuggestView('map-search');
 
-                layer2G = new ymaps.Layer('https://penza.tele2.ru/maps/_4g/%z/%x/%y.png', {
+                layer2G = new ymaps.Layer('https://penza.tele2.ru/maps/_2g/%z/%x/%y.png', {
                     tileTransparent: true
                 });
                 layer3G = new ymaps.Layer('https://penza.tele2.ru/maps/_3g/%z/%x/%y.png', {
                     tileTransparent: true
                 });
-                layer4G = new ymaps.Layer('https://penza.tele2.ru/maps/_2g/%z/%x/%y.png', {
+                layer4G = new ymaps.Layer('https://penza.tele2.ru/maps/_4g/%z/%x/%y.png', {
                     tileTransparent: true
                 });
 
